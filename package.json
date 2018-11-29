@@ -1,0 +1,23 @@
+{
+  "name": "schedule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./.bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "pm2 start ecosystem.config.js --no-daemon",
+    "client": "npm run serve --prefix client",
+    "dev": "concurrently  \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.14",
+    "pm2": "^3.2.2"
+  }
+}
